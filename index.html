@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieTime</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" href="assets/logoo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER & NAVIGATION -->
+    <div class="header-nav">
+      <header>
+        <a href="index.html">
+          <img
+            src="assets/logo-movie.png"
+            alt="MovieTime Logo"
+            class="logo-image"
+          />
+          <h1>Movie<span>Time</span></h1>
+        </a>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="html/movies.html">Movies</a></li>
+          <li><a href="html/tv-show.html">TV Shows</a></li>
+        </ul>
+      </nav>
+      <div class="kanan-nav">
+        <div class="search-box">
+          <i class="bx bx-search search-icon"></i>
+          <input
+            class="search"
+            id="search-input"
+            type="text"
+            placeholder="Search Movie..."
+          />
+        </div>
+        <button
+          class="theme-button"
+          type="button"
+          aria-label="Change theme"
+        ></button>
+        <div class="auth-area" data-base="html/"></div>
+      </div>
+    </div>
+
+    <main>
+      <!-- HERO / SLIDER -->
+      <section class="hero">
+        <button
+          class="slider-button kiri"
+          id="slider-prev"
+          type="button"
+          aria-label="Previous movie"
+        >
+          <i class="bx bx-chevron-left"></i>
+        </button>
+        <div class="hero-content">
+          <p class="label">COMING SOON</p>
+          <h2 id="judul-film">Loading...</h2>
+          <p class="hero-desc" id="deskripsi-film">Loading upcoming movie...</p>
+          <div class="hero-button">
+            <button class="watch" id="detail-button" type="button">
+              <i class="bx bx-info-circle"></i> View Detail
+            </button>
+            <button class="favorite" id="favorite-button" type="button">
+              <i class="bx bx-heart"></i> Favorite
+            </button>
+          </div>
+        </div>
+        <button
+          class="slider-button kanan"
+          id="slider-next"
+          type="button"
+          aria-label="Next movie"
+        >
+          <i class="bx bx-chevron-right"></i>
+        </button>
+        <div class="slider-indicator" id="slider-indicator"></div>
+      </section>
+
+      <!-- POPULAR MOVIES -->
+      <section class="movie-section">
+        <div class="section-title">
+          <div>
+            <p>FIND SOMETHING TO WATCH</p>
+            <h2>Popular <span>Movies</span></h2>
+          </div>
+          <a href="html/movies.html" class="see-all"
+            >See All <i class="bx bx-right-arrow-alt"></i
+          ></a>
+        </div>
+        <div class="movie-list" id="popular-movie-list">
+          <p>Loading popular movies...</p>
+        </div>
+      </section>
+
+      <!-- TOP RATED MOVIES -->
+      <section class="movie-section">
+        <div class="section-title">
+          <div>
+            <p>HIGHEST RATED MOVIES</p>
+            <h2>Top Rated <span>Movies</span></h2>
+          </div>
+          <a href="html/movies.html" class="see-all"
+            >See All <i class="bx bx-right-arrow-alt"></i
+          ></a>
+        </div>
+        <div class="movie-list" id="top-rated-movie-list">
+          <p>Loading top rated movies...</p>
+        </div>
+      </section>
+
+      <!-- POPULAR TV SHOWS -->
+      <section class="tv-section">
+        <div class="section-title">
+          <div>
+            <p>WATCH SOMETHING NEW</p>
+            <h2>Popular <span>TV Shows</span></h2>
+          </div>
+          <a href="html/tv-show.html" class="see-all"
+            >See All <i class="bx bx-right-arrow-alt"></i
+          ></a>
+        </div>
+        <div class="movie-list" id="popular-tv-list">
+          <p>Loading popular TV shows...</p>
+        </div>
+      </section>
+
+      <!-- TOP RATED TV SHOWS -->
+      <section class="tv-section">
+        <div class="section-title">
+          <div>
+            <p>HIGHEST RATED SHOWS</p>
+            <h2>Top Rated <span>TV Shows</span></h2>
+          </div>
+          <a href="html/tv-show.html" class="see-all"
+            >See All <i class="bx bx-right-arrow-alt"></i
+          ></a>
+        </div>
+        <div class="movie-list" id="top-rated-tv-list">
+          <p>Loading top rated TV shows...</p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about">
+        <details>
+          <summary>About MovieTime</summary>
+          <p>
+            <strong>MovieTime</strong> hadir dari gabungan kata
+            <em>Movie</em> dan <em>Time</em>, yang menandakan momen santai atau
+            waktunya rehat dari segala rutinitas untuk menikmati hiburan.
+          </p>
+          <p>
+            Slogan <strong>"Your Mood. Your Movie."</strong>, kami percaya
+            setiap orang punya suasana hati yang beda-beda. Dengan menggunakan
+            API The Movie Database (TMDB), MovieTime siap membantu anda
+            menemukan film dan TV show yang sesuai dengan apa yang anda
+            inginkan. Anda dapat mengecek sinopsis, melihat rating, sampai
+            menyimpan daftar tontonan favorit.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>Movie<span>Time</span></h2>
+          <p>Your Mood. Your Movie.</p>
+        </div>
+        <div class="footer-menu">
+          <a href="index.html">Home</a>
+          <a href="html/movies.html">Movies</a>
+          <a href="html/tv-show.html">TV Shows</a>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/arnsttee"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="mailto:niarputri157@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+            <i class="bx bx-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <p>&copy; 2026 MovieTime</p>
+      <p>Powered By The Movie Database (TMDB)</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

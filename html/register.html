@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- Deklarasi tipe dokumen untuk standar HTML5 -->
+<html lang="en">
+  <!-- Tag utama HTML dengan pengaturan bahasa Inggris -->
+
+  <head>
+    <!-- Bagian kepala dokumen untuk menyimpan metadata dan dependensi eksternal -->
+    <meta charset="UTF-8" />
+    <!-- Pengaturan pengodean karakter standar UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Pengaturan responsivitas tampilan pada berbagai ukuran layar -->
+    <title>MovieTime - Register</title>
+    <!-- Judul dokumen yang ditampilkan pada tab peramban -->
+    <!-- CSS Login dan Register sama -->
+    <!-- Komentar penanda kesamaan CSS untuk login dan pendaftaran -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Pemanggilan berkas CSS utama atau global -->
+    <link rel="stylesheet" href="../css/re-log.css" />
+    <!-- Pemanggilan berkas CSS khusus halaman pendaftaran dan masuk akun -->
+    <link rel="icon" href="assets/logoo.png" />
+    <!-- Menampilkan ikon favicon pada tab peramban -->
+  </head>
+  <!-- Penutup bagian head -->
+
+  <body>
+    <!-- Bagian badan dokumen yang berisi seluruh elemen visual halaman -->
+    <!-- Bagian Register -->
+    <!-- Komentar penanda bagian pendaftaran akun -->
+    <div class="login-box">
+      <!-- Kontainer utama berbentuk kotak untuk formulir pendaftaran akun -->
+      <a href="../index.html" class="logo">Movie<span>Time</span></a>
+      <!-- Tautan navigasi logo menuju ke halaman beranda -->
+      <h1>Create Account</h1>
+      <!-- Judul utama instruksi pembuatan akun pengguna baru -->
+      <p class="text">Buat akun untuk menggunakan MovieTime.</p>
+      <!-- Teks petunjuk singkat bagi pengguna baru -->
+
+      <form id="register-form">
+        <!-- Elemen formulir interaktif untuk proses pendaftaran akun -->
+        <label>Nama</label>
+        <!-- Label petunjuk teks untuk kolom nama lengkap -->
+        <input type="text" id="register-nama" placeholder="Masukkan nama" />
+        <!-- Elemen masukan teks untuk entri nama pengguna -->
+        <label>Email</label>
+        <!-- Label petunjuk teks untuk kolom alamat surel -->
+        <input type="email" id="register-email" placeholder="Masukkan email" />
+        <!-- Elemen masukan teks khusus format alamat surel -->
+        <label>Password</label>
+        <!-- Label petunjuk teks untuk kolom kata sandi -->
+        <input
+          type="password"
+          id="register-password"
+          placeholder="Masukkan password"
+        />
+        <!-- Elemen masukan teks tersamar untuk kata sandi -->
+        <button type="submit">Daftar</button>
+        <!-- Tombol aksi untuk mengirimkan data pendaftaran akun -->
+      </form>
+      <!-- Penutup elemen formulir pendaftaran -->
+
+      <p class="register-text">
+        Sudah punya akun?
+        <!-- Teks pertanyaan bagi pengguna yang telah terdaftar -->
+        <a href="login.html">Login</a>
+        <!-- Tautan navigasi untuk mengarahkan pengguna ke halaman login -->
+      </p>
+      <!-- Penutup elemen teks pengalihan login -->
+      <a href="../index.html" class="back">← Kembali ke Home</a>
+      <!-- Tautan navigasi alternatif untuk kembali ke halaman beranda -->
+    </div>
+    <!-- Penutup kontainer utama kotak pendaftaran -->
+
+    <script src="../js/common.js"></script>
+    <!-- Pemanggilan berkas skrip JavaScript umum -->
+    <script src="../js/auth.js"></script>
+    <!-- Pemanggilan berkas skrip JavaScript khusus fungsi autentikasi -->
+  </body>
+  <!-- Penutup elemen badan dokumen -->
+</html>
+<!-- Penutup tag utama HTML -->

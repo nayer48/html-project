@@ -1,0 +1,89 @@
+<!doctype html>
+<!-- Deklarasi tipe dokumen untuk standar HTML5 -->
+<html lang="en">
+  <!-- Tag utama HTML dengan pengaturan bahasa Inggris -->
+
+  <head>
+    <!-- Bagian kepala dokumen untuk menyimpan metadata dan dependensi eksternal -->
+    <meta charset="UTF-8" />
+    <!-- Pengaturan pengodean karakter standar UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Pengaturan responsivitas tampilan pada berbagai ukuran layar -->
+    <title>MovieTime - Login</title>
+    <!-- Judul dokumen yang ditampilkan pada tab peramban -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Pemanggilan berkas CSS utama atau global -->
+    <link rel="stylesheet" href="../css/re-log.css" />
+    <!-- Pemanggilan berkas CSS khusus halaman pendaftaran dan masuk akun -->
+    <link rel="icon" href="assets/logoo.png" />
+    <!-- Menampilkan ikon favicon pada tab peramban -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <!-- Impor pustaka Google Material Symbols -->
+  </head>
+  <!-- Penutup bagian head -->
+
+  <body>
+    <!-- Bagian badan dokumen yang berisi seluruh elemen visual halaman -->
+    <!-- Bagian Login -->
+    <!-- Komentar penanda bagian login -->
+    <div class="login-box">
+      <!-- Kontainer utama berbentuk kotak untuk formulir masuk akun -->
+      <a href="../index.html" class="logo">
+        <!-- Tautan navigasi logo untuk kembali ke halaman beranda -->
+        <img
+            src="../assets/logo-movie.png"
+            alt="MovieTime Logo"
+            class="logo-image"
+          />
+          <h1>Movie<span>Time</span></h1>
+        <!-- Judul atau logo utama aplikasi dengan pemisahan elemen span -->
+      </a>
+      <!-- Penutup tautan logo -->
+      <h1>Welcome Back</h1>
+      <!-- Judul utama penyambut pengguna pada halaman login -->
+      <p class="text">Login untuk melanjutkan ke MovieTime.</p>
+      <!-- Teks instruksi atau petunjuk bagi pengguna -->
+
+      <form id="login-form">
+        <!-- Elemen formulir interaktif untuk proses masuk akun -->
+        <label>Email</label>
+        <!-- Label petunjuk teks untuk kolom surel -->
+        <input type="email" id="login-email" placeholder="Masukkan email" />
+        <!-- Elemen masukan teks khusus format alamat surel -->
+        <label>Password</label>
+        <!-- Label petunjuk teks untuk kolom kata sandi -->
+        <input
+          type="password"
+          id="login-password"
+          placeholder="Masukkan password"
+        />
+        <!-- Elemen masukan teks tersamar untuk kata sandi -->
+        <button type="submit">Login</button>
+        <!-- Tombol aksi untuk mengirimkan data formulir login -->
+      </form>
+      <!-- Penutup elemen formulir login -->
+
+      <p class="register-text">
+        Belum punya akun?
+        <!-- Teks pertanyaan bagi pengguna yang belum terdaftar -->
+        <a href="register.html">Daftar</a>
+        <!-- Tautan navigasi untuk mengarahkan pengguna ke halaman pendaftaran -->
+      </p>
+      <!-- Penutup elemen teks pendaftaran -->
+
+      <a href="../index.html" class="back">← Kembali ke Home</a>
+      <!-- Tautan navigasi alternatif untuk kembali ke halaman beranda -->
+    </div>
+    <!-- Penutup kontainer utama kotak login -->
+
+    <script src="../js/common.js"></script>
+    <!-- Pemanggilan berkas skrip JavaScript umum -->
+    <script src="../js/auth.js"></script>
+    <!-- Pemanggilan berkas skrip JavaScript khusus fungsi autentikasi -->
+  </body>
+  <!-- Penutup elemen badan dokumen -->
+</html>
+<!-- Penutup tag utama HTML -->

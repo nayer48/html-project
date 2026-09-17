@@ -1,0 +1,304 @@
+/* ===============================================================
+   INDEX.CSS — KHUSUS HALAMAN HOME
+   (header, footer, tombol tema, & variabel warna ada di style.css)
+================================================================== */
+
+/* HERO */
+.hero {
+  height: 500px;
+  padding: 60px 8%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Menyembunyikan bagian elemen yang keluar dari area hero */
+  background: linear-gradient(
+    90deg,
+    var(--background) 15%,
+    rgba(17, 17, 17, 0.9) 50%,
+    rgba(74, 105, 179, 0.2)
+  );
+  background-size: cover; /* Membuat gambar background memenuhi seluruh area */
+  background-position: center; /* Menempatkan gambar background di tengah */
+  transition: background-color 0.3s ease; /* Membuat perubahan warna background lebih halus */
+}
+
+.hero-content {
+  max-width: 520px;
+  z-index: 2; /* Membuat tulisan berada di atas elemen lain */
+}
+
+.label {
+  color: var(--yellow);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px; /* jarak spasi antar huruf */
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  font-size: 55px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.hero-desc {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hero-button {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.watch,
+.favorite {
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.watch {
+  background: var(--orange);
+}
+
+.favorite {
+  background: var(--blue);
+}
+
+.watch:hover {
+  background: #d44a0a;
+}
+
+.favorite:hover {
+  background: #5b7cc4;
+}
+
+/* SLIDER */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(
+    -50%
+  ); /* Menggeser tombol ke atas setengah dari ukurannya */
+  width: 45px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 30px;
+  z-index: 3; /* Membuat tombol slider berada di atas elemen lain */
+}
+
+.slider-button:hover {
+  background: var(--orange);
+}
+
+.slider-button.kiri {
+  left: 15px;
+}
+
+.slider-button.kanan {
+  right: 15px;
+}
+
+.slider-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  gap: 7px;
+  transform: translateX(
+    -50%
+  ); /* Membuat indikator benar-benar berada di tengah */
+  z-index: 3; /* Membuat indikator berada di atas background */
+}
+
+.slider-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #aaa;
+}
+
+.slider-indicator span.active {
+  width: 20px;
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+/* MOVIE & TV */
+.movie-section,
+.tv-section {
+  padding: 55px 6%;
+  transition: background-color 0.3s ease; /* Membuat perubahan warna background lebih halus */
+}
+
+.movie-section {
+  background: var(--surface);
+}
+
+.tv-section {
+  background: var(--background);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 25px;
+}
+
+.section-title p {
+  color: var(--orange);
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  color: var(--text);
+}
+
+.section-title h2 span {
+  color: var(--blue);
+}
+
+.see-all {
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.see-all:hover {
+  color: var(--orange);
+}
+
+/* MOVIE CARD */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* Membuat 5 kolom card dalam satu baris */
+  gap: 28px; /* Memberikan jarak antar card */
+}
+
+.movie-card {
+  cursor: pointer;
+  min-width: 0; /* Membantu card menyesuaikan ukuran grid */
+  transition: 0.3s; /* Membuat perubahan posisi card lebih halus */
+}
+
+.movie-card:hover {
+  transform: translateY(-5px); /* Mengangkat card sedikit saat diarahkan */
+}
+
+.poster {
+  height: 320px;
+  border-radius: 7px;
+  overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari poster */
+  background: var(--blue);
+  margin-bottom: 10px;
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Membuat gambar memenuhi poster tanpa terlihat gepeng */
+  display: block;
+}
+
+.movie-card h3 {
+  font-size: 15px;
+  color: var(--text);
+  white-space: nowrap; /* Membuat judul tetap satu baris */
+  overflow: hidden; /* Menyembunyikan teks yang keluar */
+  text-overflow: ellipsis; /* Menampilkan ... jika judul terlalu panjang */
+}
+
+.movie-card p {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* ABOUT */
+.about {
+  padding: 40px 6%;
+  background: var(--background);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease; /* Membuat perubahan warna lebih halus */
+}
+
+.about summary {
+  color: var(--yellow);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about p {
+  max-width: 700px; /* Membatasi lebar teks agar tidak terlalu panjang */
+  margin: 12px auto 0; /* Membuat teks berada di tengah */
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.about p strong {
+  color: var(--yellow);
+}
+
+/* RESPONSIVE (khusus konten home) */
+@media (max-width: 900px) {
+  .movie-list {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Mengubah menjadi 3 kolom pada layar lebih kecil */
+  }
+
+  .poster {
+    height: 300px;
+  }
+
+  .hero h2 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-list {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Mengubah menjadi 2 kolom pada layar HP */
+    gap: 15px;
+  }
+
+  .poster {
+    height: 260px;
+  }
+
+  .hero {
+    height: 450px;
+    padding: 40px 8%;
+  }
+
+  .hero h2 {
+    font-size: 38px;
+  }
+}

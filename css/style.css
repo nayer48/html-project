@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= VARIABEL WARNA ================= */
+
+:root { /* root itu sebuah tempat untuk menyimpan nilai atau value yang akan digunakan secara global   */
+  --background: #111111; /* ini untuk background awal atau background utama untuk seluruh halaman */
+  --surface: #181818; /* digunakan untuk warna latr belakang komponen seperti card, navbar*/
+  --surface-2: #202020; /* ini untuk efek hover */
+  --text: #ffffff; /* untuk warna teks utama seperti juul dan juga header*/
+  --text-secondary: #cccccc; /* warna teks spendukung */
+  --text-muted: #aaaaaa; /* digunakan untuk informasi yang tidak terlalu penting seperti informasi tambahan, placeholer dan keterangan */
+  --orange: #ba3801; 
+  --blue: #4a69b3;
+  --yellow: #ffec89;
+  --border: #4a69b3;
+}
+
+body.light {
+  --background: #f4f6fa;
+  --surface: #ffffff;
+  --surface-2: #e9edf5;
+  --text: #1b1b1b;
+  --text-secondary: #444444;
+  --text-muted: #6b7280;
+  --orange: #ba3801;
+  --blue: #4a69b3;
+  --yellow: #9a7800;
+  --border: #d6dce8;
+}
+
+/* root masuk ke variabel global css isi si root properti yang menyimpan value 
+fungsi root itu menyimpan value ke tiap properti di dalam selektor yang dibutuhkan
+
+/* ================= DASAR ================= */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background); /* Warna latar halaman */
+  color: var(--text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 0;
+}
+
+/* ===============================================================
+   HEADER & NAVIGASI
+================================================================== */
+
+.header-nav {
+  height: 70px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background); /* Warna latar header */
+  border-bottom: 1px solid var(--border);
+  position: sticky; /* Header tetap berada di atas saat halaman di-scroll */
+  top: 0;
+  z-index: 10; /* Membuat header berada di atas elemen lain */
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+header{
+    width:25%;
+}
+
+header a{
+  display:flex; /* Membuat logo dan tulisan berada dalam satu baris */
+    align-items:center; /* Membuat logo dan tulisan sejajar di tengah */
+    gap:10px; /* Memberi jarak antara logo dan tulisan */
+}
+
+header h1{
+    font-size:24px;
+    color:var(--text);
+    white-space:nowrap;
+}
+
+header h1 span{
+    color:var(--orange);
+}
+
+.logo-image{
+    width:60px;
+    height:auto;
+    display:block;
+    object-fit:contain; /* Menyesuaikan gambar tanpa merusak bentuk asli */
+}
+
+nav {
+  width: 40%;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  font-size: 15px;
+  color: var(--text);
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent; /* Garis bawah transparan sebelum hover */
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+}
+
+nav a.active {
+  color: var(--yellow);
+  font-weight: 600;
+  border-bottom: 2px solid var(--yellow);
+}
+
+/* ================= BAGIAN KANAN NAVIGASI ================= */
+
+.kanan-nav {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.search-icon {
+  color: var(--yellow);
+  font-size: 20px;
+}
+
+.search {
+  width: 130px;
+  border: 0;
+  outline: 0;
+  background-color: transparent; /* Membuat latar input transparan */
+  color: var(--text);
+  font-family: inherit;
+}
+
+.search::placeholder {
+  color: var(--text-muted);
+}
+
+/* ================= TOMBOL TEMA ================= */
+
+.theme-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: transparent; /* Tombol tidak memiliki latar sebelum hover */
+  color: var(--yellow);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-button:hover {
+  background-color: var(--blue); /* Latar tombol saat diarahkan */
+  color: #ffffff;
+}
+
+/* ================= AREA AKUN ================= */
+
+.auth-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-area .login {
+  color: var(--yellow);
+}
+
+.auth-area .login:hover {
+  color: var(--orange);
+}
+
+.auth-area .daftar {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background-color: var(--orange); /* Warna tombol daftar */
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.auth-area .daftar:hover {
+  background-color: #d44a0a;
+}
+
+.auth-area .account {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--blue); /* Warna lingkaran akun */
+  color: #ffffff;
+}
+
+.auth-area .account:hover {
+  background-color: var(--orange);
+}
+
+.auth-area .logout {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background-color: transparent; /* Latar tombol logout dibuat transparan */
+  color: var(--text);
+  font-size: 13px;
+}
+
+.auth-area .logout:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: #ffffff;
+}
+
+/* ===============================================================
+   FOOTER
+================================================================== */
+
+footer {
+  padding: 35px 6% 25px;
+  text-align: center;
+  background-color: var(--background); /* Warna latar footer */
+  border-top: 1px solid var(--border);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-brand {
+  text-align: left;
+}
+
+.footer-brand h2 {
+  font-size: 22px;
+  color: var(--text);
+}
+
+.footer-brand h2 span {
+  color: var(--orange);
+}
+
+.footer-brand p,
+footer > p {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.footer-menu a {
+  color: var(--text);
+}
+
+.footer-menu a:hover {
+  color: var(--yellow);
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+.footer-social a:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: #ffffff;
+}
+
+/* ===============================================================
+   RESPONSIVE
+================================================================== */
+
+/* Tampilan untuk layar dengan lebar maksimal 900px */
+@media (max-width: 900px) {
+  .search {
+    width: 90px;
+  }
+}
+
+/* Tampilan untuk layar dengan lebar maksimal 600px */
+@media (max-width: 600px) {
+  .header-nav {
+    height: auto;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  header,
+  nav,
+  .kanan-nav {
+    width: 100%;
+  }
+
+  .kanan-nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+}

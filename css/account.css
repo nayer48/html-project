@@ -1,0 +1,108 @@
+
+main {
+  padding: 40px 6% 60px;
+}
+
+/* ================= PROFILE HERO ================= */
+
+.account-hero {
+  display: flex;
+  flex-direction: column; /* Mengatur isi agar tersusun dari atas ke bawah */
+  align-items: center; /* Membuat isi berada di tengah secara horizontal */
+  text-align: center;
+  padding: 50px 25px;
+  margin-bottom: 40px;
+  background: var(--surface); /* Warna latar kotak akun */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.account-hero .avatar {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center; /* Membuat ikon berada di tengah secara horizontal */
+  align-items: center; /* Membuat ikon berada di tengah secara vertikal */
+  border-radius: 50%; /* Membuat avatar menjadi bentuk lingkaran */
+  background: var(--blue); /* Warna lingkaran avatar */
+  margin-bottom: 18px;
+}
+
+.account-hero .avatar .material-symbols-outlined {
+  font-size: 46px;
+  color: #ffffff;
+}
+
+.account-hero h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.account-hero p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.account-logout {
+  margin-top: 20px;
+  padding: 10px 24px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: none; /* Membuat latar tombol transparan */
+  color: var(--text);
+  font-size: 14px;
+}
+
+.account-logout:hover {
+  background: var(--orange); /* Mengubah warna tombol saat kursor diarahkan */
+  border-color: var(--orange);
+  color: #ffffff;
+}
+
+/* ================= FAVORITES ================= */
+
+.account-favorites .movie-list p {
+  color: var(--text-muted);
+}
+
+/* ================= TOMBOL BACK (LINK) ================= */
+
+.back-container {
+  padding: 20px 6% 0;
+}
+
+a.back {
+  display: inline-flex;
+  align-items: center; /* Membuat tulisan dan ikon sejajar */
+  gap: 8px; /* Memberi jarak antara ikon dan tulisan */
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Membuat perubahan warna lebih halus */
+}
+
+a.back i {
+  font-size: 20px;
+  color: var(--yellow);
+  transition: transform 0.3s ease; /* Membuat gerakan ikon lebih halus */
+}
+
+/* Efek Hover saat kursor mengarah ke tombol Back */
+
+a.back:hover {
+  color: var(--yellow);
+}
+
+a.back:hover i {
+  transform: translateX(-4px); /* Membuat ikon bergeser sedikit ke kiri */
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 500px) {
+  .account-hero {
+    padding: 35px 18px;
+  }
+}

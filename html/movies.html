@@ -1,0 +1,216 @@
+<!doctype html>
+<!-- Deklarasi tipe dokumen untuk standar HTML5 -->
+<html lang="en">
+  <!-- Tag utama HTML dengan pengaturan bahasa Inggris -->
+
+  <head>
+    <!-- Bagian kepala dokumen untuk menyimpan metadata dan dependensi eksternal -->
+    <meta charset="UTF-8" />
+    <!-- Pengaturan pengodean karakter standar UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Pengaturan responsivitas tampilan pada berbagai ukuran layar -->
+    <title>MovieTime - Movies</title>
+    <!-- Judul dokumen yang ditampilkan pada tab peramban -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Pemanggilan berkas CSS utama atau global -->
+    <link rel="stylesheet" href="../css/movi-tv.css" />
+    <!-- Pemanggilan berkas CSS khusus halaman film dan acara TV -->
+    <link rel="icon" href="assets/logoo.png" />
+    <!-- Menampilkan ikon favicon pada tab peramban -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <!-- Impor pustaka Google Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <!-- Impor pustaka ikon Boxicons -->
+  </head>
+  <!-- Penutup bagian head -->
+
+  <body>
+    <!-- Bagian badan dokumen yang berisi seluruh elemen visual halaman -->
+    <!-- ================= HEADER ================= -->
+    <!-- Komentar penanda bagian header -->
+    <div class="header-nav">
+      <!-- Kontainer utama untuk bagian bilah navigasi dan tajuk -->
+      <header>
+        <!-- Elemen tajuk untuk penempatan logo aplikasi -->
+        <a href="../index.html">
+          <!-- Tautan navigasi logo menuju ke halaman beranda -->
+          <img
+            src="../assets/logo-movie.png"
+            alt="MovieTime Logo"
+            class="logo-image"
+          />
+          <h1>Movie<span>Time</span></h1>
+          <!-- Judul atau logo utama aplikasi dengan pemisahan elemen span -->
+        </a>
+        <!-- Penutup tautan logo -->
+      </header>
+      <!-- Penutup elemen tajuk -->
+
+      <!-- Menu -->
+      <!-- Komentar penanda menu navigasi -->
+      <nav>
+        <!-- Elemen navigasi utama untuk menu situs -->
+        <ul>
+          <!-- Daftar menu navigasi -->
+          <li><a href="../index.html">Home</a></li>
+          <!-- Item menu untuk mengarah ke halaman beranda -->
+          <li><a href="movies.html" class="active">Movies</a></li>
+          <!-- Item menu halaman film dengan penanda status aktif -->
+          <li><a href="tv-show.html">TV Shows</a></li>
+          <!-- Item menu untuk mengarah ke halaman acara televisi -->
+        </ul>
+        <!-- Penutup daftar menu navigasi -->
+      </nav>
+      <!-- Penutup elemen navigasi -->
+
+      <!-- Bagian kanan -->
+      <!-- Komentar penanda bagian kanan navigasi -->
+      <div class="kanan-nav">
+        <!-- Kontainer untuk elemen navigasi di sisi kanan -->
+        <div class="search-box">
+          <!-- Kontainer untuk komponen formulir pencarian -->
+          <span class="material-symbols-outlined search-icon">search</span>
+          <!-- Ikon pencarian dari Google Material Symbols -->
+          <input
+            class="search"
+            id="search-input"
+            type="text"
+            placeholder="Search Movie..."
+          />
+          <!-- Elemen masukan teks untuk kata kunci pencarian -->
+        </div>
+        <!-- Penutup kontainer pencarian -->
+        <button class="theme-button" type="button"></button>
+        <!-- Tombol interaktif untuk pengubahan tema tampilan -->
+        <div class="auth-area" data-base=""></div>
+        <!-- Elemen penampung komponen autentikasi pengguna secara dinamis -->
+      </div>
+      <!-- Penutup kontainer navigasi kanan -->
+    </div>
+    <!-- Penutup kontainer header-nav -->
+
+    <!-- ================= MAIN ================= -->
+    <!-- Komentar penanda bagian konten utama -->
+    <main>
+      <!-- Elemen area konten utama dokumen -->
+      <!-- ================= HEADER MOVIES ================= -->
+      <!-- Komentar penanda bagian tajuk halaman film -->
+      <section class="movie-header">
+        <!-- Bagian pengenal atau tajuk utama halaman daftar film -->
+        <p class="judul-kecil">EXPLORE MOVIES</p>
+        <!-- Subjudul berupa instruksi penjelajahan -->
+        <h1>Movies</h1>
+        <!-- Judul utama halaman daftar film -->
+        <p class="deskripsi">Find the movie you want to watch.</p>
+        <!-- Deskripsi singkat petunjuk pencarian film -->
+      </section>
+      <!-- Penutup bagian tajuk halaman film -->
+
+      <!-- ================= GENRE ================= -->
+      <!-- Komentar penanda bagian kategori genre -->
+      <section class="genre-section">
+        <!-- Bagian penyaringan daftar film berdasarkan genre -->
+        <h2>Genre</h2>
+        <!-- Judul bagian filter genre -->
+        <div class="genre-list">
+          <!-- Kontainer pembungkus daftar tombol penyaring genre -->
+          <button class="genre active" data-genre="all">All</button>
+          <!-- Tombol filter untuk semua genre dengan status aktif -->
+          <button class="genre" data-genre="28">Action</button>
+          <!-- Tombol filter untuk genre Action -->
+          <button class="genre" data-genre="35">Comedy</button>
+          <!-- Tombol filter untuk genre Comedy -->
+          <button class="genre" data-genre="18">Drama</button>
+          <!-- Tombol filter untuk genre Drama -->
+          <button class="genre" data-genre="27">Horror</button>
+          <!-- Tombol filter untuk genre Horror -->
+          <button class="genre" data-genre="10749">Romance</button>
+          <!-- Tombol filter untuk genre Romance -->
+          <button class="genre" data-genre="14">Fantasy</button>
+          <!-- Tombol filter untuk genre Fantasy -->
+        </div>
+        <!-- Penutup kontainer daftar genre -->
+      </section>
+      <!-- Penutup bagian penyaringan genre -->
+
+      <!-- ================= MOVIE LIST ================= -->
+      <!-- Komentar penanda bagian daftar film -->
+      <section class="movies">
+        <!-- Bagian kontainer penampung grid daftar film dan navigasi halaman -->
+        <div id="movie-list" class="movie-list">
+          <!-- Kontainer penampung data film dari API yang dimuat melalui JavaScript -->
+          <p>Loading movies...</p>
+          <!-- Teks indikator proses pemuatan data film -->
+        </div>
+        <!-- Penutup kontainer daftar film -->
+        <!-- PAGINATION -->
+        <!-- Komentar penanda bagian penomoran halaman -->
+        <div id="pagination" class="pagination"></div>
+        <!-- Kontainer penampung elemen navigasi penomoran halaman dinamis -->
+      </section>
+      <!-- Penutup bagian daftar film -->
+    </main>
+    <!-- Penutup elemen area konten utama -->
+
+    <!-- ================= FOOTER ================= -->
+    <!-- Komentar penanda bagian catatan kaki -->
+    <footer>
+      <!-- Elemen catatan kaki dokumen -->
+      <div class="footer-content">
+        <!-- Kontainer utama isi elemen catatan kaki -->
+        <div class="footer-brand">
+          <!-- Kontainer identitas merek pada bagian catatan kaki -->
+          <h2>Movie<span>Time</span></h2>
+          <!-- Judul identitas merek -->
+          <p>Your Mood. Your Movie.</p>
+          <!-- Slogan identitas merek -->
+        </div>
+        <!-- Penutup kontainer identitas merek -->
+        <div class="footer-menu">
+          <!-- Kontainer menu tautan navigasi pada bagian catatan kaki -->
+          <a href="index.html">Home</a>
+          <!-- Tautan navigasi menuju ke halaman beranda -->
+          <a href="html/movies.html">Movies</a>
+          <!-- Tautan navigasi menuju ke halaman film -->
+          <a href="html/tv-show.html">TV Shows</a>
+          <!-- Tautan navigasi menuju ke halaman acara televisi -->
+        </div>
+        <!-- Penutup kontainer menu tautan navigasi -->
+        <div class="footer-social">
+          <!-- Kontainer tautan media sosial dan kontak -->
+          <a
+            href="https://www.instagram.com/arnsttee"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <!-- Tautan menuju ke profil Instagram pada tab baru -->
+          <a href="mailto:niarputri157@gmail.com" aria-label="Email"
+            ><i class="bx bx-envelope"></i
+          ></a>
+          <!-- Tautan pengiriman surel elektronik beserta ikon -->
+        </div>
+        <!-- Penutup kontainer tautan media sosial -->
+      </div>
+      <!-- Penutup kontainer utama isi catatan kaki -->
+      <p>&copy; 2026 MovieTime</p>
+      <!-- Pernyataan hak cipta dokumen -->
+      <p>Powered By The Movie Database (TMDB)</p>
+      <!-- Pernyataan atribusi sumber data antarmuka pemograman aplikasi -->
+    </footer>
+    <!-- Penutup elemen catatan kaki -->
+
+    <script src="../js/common.js"></script>
+    <!-- Pemanggilan berkas skrip JavaScript umum -->
+    <script src="../js/movies.js"></script>
+    <!-- Pemanggilan berkas skrip JavaScript khusus halaman film -->
+  </body>
+  <!-- Penutup elemen badan dokumen -->
+</html>
+<!-- Penutup tag utama HTML -->

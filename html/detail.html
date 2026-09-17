@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieTime - Detail</title>
+
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS khusus halaman detail -->
+    <link rel="stylesheet" href="../css/detail.css">
+
+    <link rel="icon" href="assets/logoo.png">
+
+    <!-- Icon Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+    <!-- Icon Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header-nav">
+        <header>
+            <a href="../index.html">
+                <img src="../assets/logo-movie.png" alt="MovieTime Logo" class="logo-image">
+                <h1>Movie<span>Time</span></h1>
+            </a>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="tv-show.html">TV Shows</a></li>
+            </ul>
+        </nav>
+
+        <div class="kanan-nav">
+            <button class="theme-button" type="button"></button> <!-- Tombol untuk mengganti tema -->
+            <div class="auth-area" data-base=""></div> <!-- Tempat menampilkan menu login/akun -->
+        </div>
+    </div>
+
+    <!-- DETAIL FILM -->
+    <main>
+        <a href="movies.html" class="back" id="back-link">
+            <i class="bx bx-arrow-back"></i>Back
+        </a>
+
+        <section class="detail-box">
+            <div class="detail-content" id="detail-content"></div> <!-- Data detail film diisi melalui JavaScript -->
+        </section>
+
+        <!-- DAFTAR PEMERAN -->
+        <section class="cast-section">
+            <h2>Cast</h2>
+            <div class="cast-list" id="cast-list"></div> <!-- Data pemeran diisi melalui JavaScript -->
+        </section>
+    </main>
+
+    <!-- POPUP TRAILER -->
+    <div class="trailer-popup" id="trailer-popup">
+        <div class="trailer-box">
+            <button class="close-trailer" id="close-trailer" type="button">
+                <i class="bx bx-x"></i>
+            </button>
+
+            <iframe id="trailer-video" allowfullscreen></iframe> <!-- Menampilkan video trailer -->
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>Movie<span>Time</span></h2>
+                <p>Your Mood. Your Movie.</p>
+            </div>
+
+            <div class="footer-menu">
+                <a href="index.html">Home</a>
+                <a href="html/movies.html">Movies</a>
+                <a href="html/tv-show.html">TV Shows</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.instagram.com/arnsttee" target="_blank" aria-label="Instagram">
+                    <i class="bx bxl-instagram"></i>
+                </a>
+
+                <a href="mailto:niarputri157@gmail.com" aria-label="Email">
+                    <i class="bx bx-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <p>&copy; 2026 MovieTime</p>
+        <p>Powered By The Movie Database (TMDB)</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/common.js"></script>
+    <script src="../js/detail.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieTime - Akun</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/movi-tv.css" />
+    <link rel="stylesheet" href="../css/account.css" />
+    <link rel="icon" href="../assets/logoo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <div class="header-nav">
+      <header>
+        <a href="../index.html">
+          <img
+            src="../assets/logo-movie.png"
+            alt="MovieTime Logo"
+            class="logo-image"
+          />
+          <h1>Movie<span>Time</span></h1>
+        </a>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="tv-show.html">TV Shows</a></li>
+        </ul>
+      </nav>
+      <div class="kanan-nav">
+        <button class="theme-button" type="button"></button>
+        <div class="auth-area" data-base=""></div>
+      </div>
+    </div>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+      <!-- Tombol kembali -->
+      <div class="back-container">
+        <a href="javascript:history.back()" class="back" id="back-link">
+          <i class="bx bx-arrow-back"></i>Back
+        </a>
+      </div>
+
+      <!-- Profil akun -->
+      <section class="account-hero">
+        <div class="avatar">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <h1 id="account-name">Nama Pengguna</h1>
+        <p id="account-email">email@example.com</p>
+        <button class="account-logout" id="account-logout-button" type="button">
+          Logout
+        </button>
+      </section>
+
+      <!-- Daftar favorite -->
+      <section class="movie-section account-favorites">
+        <div class="section-title">
+          <div>
+            <p>TONTONAN TERSIMPAN</p>
+            <h2>My <span>Favorites</span></h2>
+          </div>
+        </div>
+        <div class="movie-list" id="favorite-list">
+          <p>Memuat favorite...</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>Movie<span>Time</span></h2>
+          <p>Your Mood. Your Movie.</p>
+        </div>
+
+        <div class="footer-menu">
+          <a href="../index.html">Home</a>
+          <a href="movies.html">Movies</a>
+          <a href="tv-show.html">TV Shows</a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/arnsttee"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="mailto:niarputri157@gmail.com" aria-label="Email">
+            <i class="bx bx-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <p>&copy; 2026 MovieTime</p>
+      <p>Powered By The Movie Database (TMDB)</p>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="../js/common.js"></script>
+    <script src="../js/account.js"></script>
+  </body>
+</html>

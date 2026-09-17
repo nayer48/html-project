@@ -1,0 +1,259 @@
+/* ===============================================================
+   DETAIL.CSS — KHUSUS HALAMAN DETAIL
+   (header, footer, tombol tema, & variabel warna ada di style.css)
+================================================================== */
+
+main {
+  padding: 35px 7%;
+}
+
+/* Tombol kembali ke halaman sebelumnya */
+.back {
+  display: inline-flex; /* Membuat isi sejajar dalam satu baris */
+  align-items: center; /* Membuat isi berada di tengah secara vertikal */
+  gap: 5px; /* Jarak antara ikon dan tulisan */
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.back:hover {
+  color: var(--orange); /* Warna berubah saat kursor diarahkan */
+}
+
+/* ================= DETAIL BOX ================= */
+
+.detail-box {
+  padding: 45px;
+  min-height: 450px; /* Tinggi minimum kotak */
+  position: relative; /* Menjadi patokan untuk elemen di dalamnya */
+  overflow: hidden; /* Menyembunyikan bagian yang keluar dari kotak */
+  border-radius: 10px;
+  background: var(--surface);
+  transition: 0.3s; /* Perubahan tampilan menjadi lebih halus */
+}
+
+/* Membuat gambar latar belakang yang samar */
+.detail-box::before {
+  content: ""; /* Membuat elemen tambahan kosong */
+  position: absolute; /* Menempatkan elemen di dalam detail-box */
+  inset: 0; /* Membuat elemen memenuhi seluruh detail-box */
+  background-image: var(--bg); /* Menggunakan gambar yang disimpan di --bg */
+  background-size: cover; /* Membuat gambar memenuhi area */
+  background-position: center; /* Menempatkan gambar di tengah */
+  filter: blur(12px); /* Membuat gambar menjadi buram */
+  opacity: 0.25; /* Membuat gambar menjadi transparan */
+  transform: scale(
+    1.1
+  ); /* Membesarkan gambar sedikit agar tidak ada bagian kosong */
+}
+
+/* Isi detail film */
+.detail-content {
+  position: relative; /* Membuat isi berada di atas gambar background */
+  display: flex; /* Menyusun poster dan informasi berdampingan */
+  align-items: center; /* Menyamakan posisi secara vertikal */
+  gap: 35px; /* Jarak antara poster dan informasi */
+}
+
+/* ================= POSTER ================= */
+
+.detail-poster {
+  width: 240px;
+  height: 340px;
+  flex-shrink: 0; /* Poster tidak mengecil saat ruang sempit */
+}
+
+.detail-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gambar memenuhi area tanpa terlihat gepeng */
+  border-radius: 8px;
+}
+
+/* ================= INFO ================= */
+
+.detail-info {
+  max-width: 700px; /* Membatasi lebar informasi */
+}
+
+.detail-info h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.detail-info p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6; /* Mengatur jarak antarbaris */
+  margin-bottom: 8px;
+}
+
+/* ================= BUTTON ================= */
+
+.buttons {
+  display: flex; /* Menyusun tombol secara mendatar */
+  gap: 10px; /* Jarak antar tombol */
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer; /* Kursor berubah menjadi tangan */
+  transition: 0.2s; /* Perubahan saat hover menjadi lebih halus */
+}
+
+.trailer {
+  background: var(--orange);
+}
+
+.favorite {
+  background: var(--blue);
+}
+
+/* Efek saat tombol diarahkan */
+.buttons button:hover {
+  opacity: 0.8; /* Membuat tombol sedikit transparan */
+  transform: translateY(-2px); /* Menggeser tombol sedikit ke atas */
+}
+
+/* ================= CAST ================= */
+
+.cast-section {
+  padding: 45px 0;
+}
+
+.cast-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--text);
+}
+
+.cast-list {
+  display: flex; /* Membuat daftar cast berjajar */
+  gap: 18px; /* Jarak antar cast */
+  overflow-x: auto; /* Bisa digeser ke kanan dan kiri jika terlalu panjang */
+  padding-bottom: 15px;
+}
+
+/* Mengatur scrollbar pada Chrome/Edge */
+.cast-list::-webkit-scrollbar {
+  height: 8px; /* Tinggi scrollbar */
+}
+
+.cast-list::-webkit-scrollbar-thumb {
+  background: var(--blue); /* Warna bagian yang digeser */
+  border-radius: 10px;
+}
+
+.cast-card {
+  width: 120px;
+  flex-shrink: 0; /* Ukuran card tidak mengecil */
+}
+
+.cast-card img {
+  width: 120px;
+  height: 160px;
+  object-fit: cover; /* Gambar memenuhi ukuran tanpa gepeng */
+  border-radius: 6px;
+  background: var(--surface-2);
+}
+
+.cast-card h3 {
+  font-size: 13px;
+  margin-top: 7px;
+  color: var(--text);
+}
+
+.cast-card p {
+  color: var(--text-muted);
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+/* ================= TRAILER ================= */
+
+.trailer-popup {
+  display: none; /* Popup disembunyikan sebelum dibuka */
+  position: fixed; /* Popup tetap mengikuti layar */
+  inset: 0; /* Membuat popup memenuhi seluruh layar */
+  background: rgba(0, 0, 0, 0.85); /* Membuat latar belakang gelap transparan */
+  align-items: center; /* Menempatkan isi di tengah secara vertikal */
+  justify-content: center; /* Menempatkan isi di tengah secara horizontal */
+  z-index: 100; /* Membuat popup berada di atas elemen lain */
+}
+
+.trailer-box {
+  width: 80%;
+  max-width: 850px; /* Lebar maksimal kotak trailer */
+  position: relative; /* Menjadi patokan untuk tombol close */
+}
+
+.trailer-box iframe {
+  width: 100%;
+  height: 480px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Tombol untuk menutup trailer */
+.close-trailer {
+  position: absolute; /* Menempatkan tombol berdasarkan trailer-box */
+  right: -40px; /* Posisi tombol di sebelah kanan */
+  top: -40px; /* Posisi tombol di atas */
+  width: 35px;
+  height: 35px;
+  border: 0;
+  border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+  background: var(--orange);
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-trailer i {
+  font-size: 24px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tampilan untuk layar kecil */
+@media (max-width: 600px) {
+  main {
+    padding: 25px 5%;
+  }
+
+  .detail-box {
+    padding: 25px;
+  }
+
+  .detail-content {
+    flex-direction: column; /* Poster dan informasi menjadi atas-bawah */
+    align-items: flex-start;
+  }
+
+  .detail-poster {
+    width: 190px;
+    height: 270px;
+  }
+
+  .detail-info h2 {
+    font-size: 28px;
+  }
+
+  .trailer-box {
+    width: 90%;
+  }
+
+  .trailer-box iframe {
+    height: 250px;
+  }
+
+  .close-trailer {
+    right: 0;
+    top: -45px;
+  }
+}

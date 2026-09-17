@@ -1,0 +1,141 @@
+/* ===============================================================
+   RE-LOG.CSS — KHUSUS HALAMAN LOGIN & REGISTER
+   Variabel warna menggunakan style.css
+================================================================== */
+
+body {
+  min-height: 100vh; /* Tinggi minimal mengikuti tinggi layar */
+  display: flex; /* Menggunakan flexbox */
+  justify-content: center; /* Menempatkan isi di tengah secara horizontal */
+  align-items: center; /* Menempatkan isi di tengah secara vertikal */
+  padding: 20px; /* Memberikan jarak di sekitar isi */
+}
+
+/* ================= LOGIN BOX ================= */
+
+.login-box {
+  width: 380px; /* Menentukan lebar kotak login */
+  padding: 35px; /* Memberikan jarak antara isi dan tepi kotak */
+  background-color: var(--surface); /* Warna latar kotak */
+  border: 1px solid var(--border); /* Memberikan garis tepi */
+  border-radius: 10px; /* Membuat sudut kotak melengkung */
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+  display: block; /* Membuat elemen menjadi block */
+  text-align: center; /* Menempatkan logo di tengah */
+  color: var(--text); /* Warna teks logo */
+  font-size: 27px; /* Ukuran tulisan logo */
+  font-weight: bold; /* Membuat tulisan menjadi tebal */
+  margin-bottom: 30px; /* Memberikan jarak bawah logo */
+}
+
+.logo span {
+  color: var(--orange); /* Memberikan warna berbeda pada bagian span */
+}
+
+/* ================= JUDUL ================= */
+
+.login-box h1 {
+  font-size: 28px; /* Ukuran judul */
+  margin-bottom: 8px; /* Memberikan jarak bawah judul */
+  color: var(--text); /* Warna judul */
+}
+
+.text {
+  color: var(--text-muted); /* Warna teks tambahan */
+  font-size: 14px; /* Ukuran teks */
+  margin-bottom: 25px; /* Memberikan jarak bawah teks */
+}
+
+/* ================= FORM ================= */
+
+form {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun isi form secara vertikal */
+}
+
+label {
+  font-size: 14px; /* Ukuran tulisan label */
+  margin-bottom: 7px; /* Memberikan jarak bawah label */
+  color: var(--text); /* Warna tulisan label */
+}
+
+input {
+  padding: 12px; /* Memberikan jarak di dalam input */
+  margin-bottom: 18px; /* Memberikan jarak antar input */
+  border: 1px solid var(--border); /* Memberikan garis tepi input */
+  border-radius: 5px; /* Membuat sudut input melengkung */
+  outline: none; /* Menghilangkan garis luar bawaan */
+  background-color: var(--background); /* Warna latar input */
+  color: var(--text); /* Warna teks input */
+}
+
+input:focus {
+  border-color: var(--blue); /* Mengubah warna border saat input dipilih */
+}
+
+input::placeholder {
+  color: var(--text-muted); /* Warna teks placeholder */
+}
+
+/* ================= BUTTON ================= */
+
+button {
+  padding: 12px; /* Memberikan jarak di dalam tombol */
+  border: 0; /* Menghilangkan border */
+  border-radius: 5px; /* Membuat sudut tombol melengkung */
+  background-color: var(--orange); /* Warna latar tombol */
+  color: #ffffff; /* Warna tulisan tombol */
+  font-weight: bold; /* Membuat tulisan tombol tebal */
+  cursor: pointer; /* Mengubah kursor menjadi pointer */
+}
+
+button:hover {
+  background-color: #d44a0a; /* Mengubah warna tombol saat diarahkan */
+}
+
+/* ================= LINK ================= */
+
+.register-text {
+  text-align: center; /* Menempatkan teks di tengah */
+  color: var(--text-muted); /* Warna teks */
+  font-size: 13px; /* Ukuran teks */
+  margin-top: 20px; /* Memberikan jarak atas */
+}
+
+.register-text a {
+  color: var(--yellow); /* Warna link */
+  font-weight: bold; /* Membuat link menjadi tebal */
+}
+
+.register-text a:hover {
+  color: var(--orange); /* Mengubah warna link saat diarahkan */
+}
+
+/* ================= BACK ================= */
+
+.back {
+  display: block; /* Membuat link menjadi block */
+  text-align: center; /* Menempatkan link di tengah */
+  color: var(--blue); /* Warna link kembali */
+  font-size: 13px; /* Ukuran tulisan */
+  margin-top: 20px; /* Memberikan jarak atas */
+}
+
+.back:hover {
+  color: var(--yellow); /* Mengubah warna saat diarahkan */
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tampilan untuk layar dengan lebar maksimal 500px */
+@media (max-width: 500px) {
+  .login-box {
+    width: 100%; /* Lebar kotak mengikuti ukuran layar */
+    max-width: 380px; /* Membatasi lebar maksimal kotak */
+    padding: 25px; /* Mengurangi jarak dalam kotak pada layar kecil */
+  }
+}
